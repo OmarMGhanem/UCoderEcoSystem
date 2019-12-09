@@ -8,14 +8,14 @@
 #ifndef LCDCONFIG_H_
 #define LCDCONFIG_H_
 
-#define RS PC3
-#define RW PC4
+#define RS PC0
+#define RW PC1
 #define E  PC2
 #define lcdCtrlPort PORTC
 #define lcdCtrlPortDir DDRC
-#define lcdDataPort PORTB
-#define lcdDataPortDir DDRB
-#define lcdDataPortPin PINB
+#define lcdDataPort PORTD
+#define lcdDataPortDir DDRD
+#define lcdDataPortPin PIND
 
 #define DATA_BITS_MODE 8
 

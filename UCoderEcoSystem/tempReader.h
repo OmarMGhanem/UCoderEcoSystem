@@ -16,4 +16,9 @@
 #include <avr/interrupt.h>
 #include "adc.h"
 
+
+
+uint16 tempRead(void);
+
+
 #endif /* TEMPREADER_H_ */
