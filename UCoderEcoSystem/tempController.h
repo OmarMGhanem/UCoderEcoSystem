@@ -16,5 +16,8 @@
 #include <avr/interrupt.h>
 #include "adc.h"
 
+uint8* temp(uint8* );
+void Timer0_PWM_Init(unsigned char set_duty_cycle);
+void fanSpeedMapper(uint16 temp);
 
 #endif /* TEMPCONTROLLER_H_ */
