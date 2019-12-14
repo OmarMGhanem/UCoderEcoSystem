@@ -4,19 +4,29 @@
  *  Created on: Dec 9, 2019
  *      Author: OmarG
  */
-extern ADC_CONFIG adcConfigStruct ;
+#include "tempCOntroller.h"
+#include "PIR.h"
 
+
+extern ADC_CONFIG adcConfigStruct ;
 
 
 
 int main(void){
 	adcInit(&adcConfigStruct);
-	uint8 Ctrl[2] = {1,127};
-	uint8 *tempStatePtr ;
+	CLEAR_BIT(PTR_STATE_DIR , PA7 );
+	SET_BIT(PIR_CTRL_PORT_DIR,INPUT1);
+	SET_BIT(PIR_CTRL_PORT_DIR,INPUT2);
+	Stop_motor();
 
+	uint8 TCtrl[2] = {0,127};
+	uint8 DCtrl[2] = {0,0};
+	uint8 *tempStatePtr ;
+	uint8 *doorStatePtr ;
 	while(1){
 
-		tempStatePtr =temp(Ctrl);
+		tempStatePtr =temp(TCtrl);
+		doorStatePtr=CTR_pir(DCtrl);
 
 
 	}
