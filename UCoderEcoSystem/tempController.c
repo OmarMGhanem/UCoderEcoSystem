@@ -13,6 +13,8 @@ uint8* temp(uint8* L_Ctrl ){
 	static uint8 L_State[2]	;
 
 	uint16 temp;
+	adcInit(&adcConfigStruct);
+
 
 	temp = tempRead();
 	_delay_ms(20);

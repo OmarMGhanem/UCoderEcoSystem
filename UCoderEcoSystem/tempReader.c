@@ -9,7 +9,7 @@
 #include "tempReader.h"
 
 
- ADC_CONFIG adcConfigStruct = {ADC0,AREF,PS8,OFF} ;
+ADC_CONFIG adcConfigStruct = {ADC0,AREF,PS8,OFF} ;
 
 uint16 tempRead(){
 	uint16 L_Temp;
